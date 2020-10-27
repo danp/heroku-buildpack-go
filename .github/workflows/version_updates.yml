@@ -10,7 +10,7 @@ jobs:
     - name: install gh
       run: |
         set -e
-        curl --fail -s --retry 3 --max-time 30 https://github.com/cli/cli/releases/download/v1.1.0/gh_1.1.0_linux_amd64.tar.gz > /tmp/cli.tgz
+        curl -L --fail -s --retry 3 --max-time 30 https://github.com/cli/cli/releases/download/v1.1.0/gh_1.1.0_linux_amd64.tar.gz > /tmp/cli.tgz
         echo '2e1ca73bd7ecbd6e7e71368e901ebb7b1d83c3ca375752c7ab23cc664190d452  -' | shasum -a 256 < /tmp/cli.tgz
         mkdir ~/cli
         tar -C ~/cli --strip-components 1 -zxf /tmp/cli.tgz
