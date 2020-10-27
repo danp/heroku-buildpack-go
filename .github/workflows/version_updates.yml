@@ -2,6 +2,7 @@ name: version updates
 on:
   schedule:
   - cron: '42 * * * *'
+  workflow_dispatch:
 jobs:
   update:
     runs-on: ubuntu-latest
